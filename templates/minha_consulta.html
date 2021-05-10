@@ -9,11 +9,10 @@
     <body>
         <section class="container mt-2">
             <h1>Passagem</h1>
-            <form method="post" action={% url 'minha_consulta' %}>
-                {% csrf_token %}
-                {{ form }}
-                <input type="submit" value="Ok" class="btn btn-success">
-            </form>
+            <p>Sua origem é: {{ form.origem.value }}</p>
+            <p>Sua destino é: {{ form.destino.value }}</p>
+            <p>Sua data de ida é: {{ form.data_ida.value }}</p>
+            <p>Sua data de volta é: {{ form.data_volta.value }}</p>
         </section>
     </body>
 </html>
